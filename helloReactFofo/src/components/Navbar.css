@@ -1,7 +1,6 @@
 .container-navbar{
-    background-color: aqua;
-    border-radius: 5px;
+    background-color: pink;
     font-family: 'Courier New', Courier, monospace;
-    width: 3%;
-    margin-left: 45%;
+    text-align: center;
+    height: 60px;
 }
