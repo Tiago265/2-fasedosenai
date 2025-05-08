@@ -1,10 +1,16 @@
 .container-header{
     height: 70px;
     background-color: var(--cor-4);
+    color: var(--cor-2);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    color: var(--cor-2);
+    /* padding-right: 20px; */
+
+}
+
+.titulo{
+    width: 100%;
+    text-align: center;
 }

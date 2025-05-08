@@ -1,11 +1,21 @@
-.container-sorteio{
-    border: 2px solid var(--cor-4);
+.container-body{
     border-radius: 10px;
-    margin: 25px;
-    padding: 10px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+h2{
+    text-align: center;
+}
+
+.cards{
+   text-align: center;
+}
+
+.produtos{
+
+        
 }

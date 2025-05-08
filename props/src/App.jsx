@@ -38,7 +38,7 @@ function App() {
       preco: Number(inputPreco)
     }
     setProdutos([ produto2, ...produtos]) 
-  }
+  } 
 
   return (
     <div className='container-app'>

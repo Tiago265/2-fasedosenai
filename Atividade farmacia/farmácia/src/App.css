@@ -1,5 +1,11 @@
 body{
-  height: 100%;
-  margin: 0;
-  
+  background-color: black;
+  color: pink;
+}
+.container-app{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
