@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 
-function Diagnostico() {
-const[diagnostico, setDiagnostico] = useState('')
+function Diagnostico(props) {
+
   return (
-    <div className='container-diagnostico'>
-      
-    </div>
+    <div className='container-historico'>
+    <h4> {props.sintoma} </h4> - 
+    <p> {props.niveldoSintoma} </p>
+    <label htmlFor=""> {props.niveldoSintoma} </label>
+   </div>
   )
 }
 

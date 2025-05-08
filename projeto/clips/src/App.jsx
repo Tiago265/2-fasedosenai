@@ -4,19 +4,30 @@ import './App.css'
 import Diagnostico from './components/Diagnostico'
 
 function App() {
-const[sintoma,setSintomas] = useState('')
+  const[inputNiveldoSintoma, setInputNivelSintoma] = useState('')
+  const[inputSintoma,setInputSintoma] = useState()
+  const[movimentacao, setMovimentacao] = useState([])
 
 function diagnosticar(){
 
-  // let nome = {
-  //   id:Date.now(),
-  //   movimentacao:inputNome,
-  //   preco:inputValor,
-  //   tipo:'(Crédito)'
-  // }
-   if(sintoma == "gripe"){
-
-   }
+  if(setInputNivelSintoma >= 6){
+    let nome = {
+      id:Date.now(),
+      movimentacao:inputSintoma,
+      niveldoSintoma:'Grave'
+    }
+    setInputSintoma(nome, ...inputSintoma)
+  }
+  else if(setInputNivelSintoma <= 6){
+    let nome = {
+      id:Date.now(),
+      movimentacao:inputSintoma,
+      niveldoSintoma:'Leve'
+    }
+    setInputSintoma([nome, ...inputSintoma])
+  }
+  setInputSintoma('')
+  setInputNivelSintoma('')
 }
   return (
     <div className='container-app'>
@@ -24,11 +35,18 @@ function diagnosticar(){
 
     <label htmlFor="">Digite o sintoma que você sente: </label>
     <input type="text" 
-    value={sintoma}
-    onChange={(event) => setSintomas(event.target.value)} placeholder='Diagnóstico'/>
+    value={inputSintoma}
+    onChange={(event) => setInputSintoma(event.target.value)} 
+    placeholder='Diagnóstico'/>
+    <input type="number" 
+    value={inputNiveldoSintoma}
+    onChange={(event) => setInputNivelSintoma(event.target.value)}
+    placeholder='Nivel'/>
     <button onClick={diagnosticar}>Diagnosticar</button>
 
-    <Diagnostico />
+    {movimentacao.map((p) => (
+       <Diagnostico key={p.id} movimentacao={p.movimentacao}  niveldoSintoma={p.niveldoSintoma} />
+    ))}
     </div>
   )
 }
